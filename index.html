@@ -14,12 +14,15 @@
     <header>
        <a href="/"> <img style="cursor: pointer;" width="100px" src="./public/pngegg.png" /></a>
         <nav>
-            <ul>
+            <ul id="menu-list">
                 <li>Home</li>
                 <li>About Us</li>
                 <li>Contact Us</li>
                 <li>Blogs</li>
             </ul>
+            <div class="menu-icon">
+                <i style="font-size: 50px; color: white;" onclick="toggleMenu()"  class="fa-solid fa-bars"></i>
+            </div>
         </nav>
         <div>
             <button>Login</button><button>Signup</button>
@@ -33,11 +36,42 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis dolorum <del> accusamus cupiditate, officiis</del> dicta quisquam eaque magnam inventore temporibus, modi asperiores quas nisi eius soluta in enim quo voluptatibus veniam.</p>
             <button class="btn">Buy Now</button>
         </section>
-    </main>
+
+        <section style="display: flex; background-color: darkblue; color: white; height: 70vh; justify-content: center; align-items: center; padding-inline: 50px; gap: 120px;">
+            
+           <div style="display: flex; flex-direction: column; gap: 40px;">
+            <h1 style="font-family: 'Courier New', Courier, monospace; font-size: 70px; ">About Us</h1>
+            <h4>What is our porpose ?</h4>
+            <p style="width: 30vw;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio necessitatibus autem, quo veniam cum dicta doloribus nesciunt corrupti porro deleniti commodi et corporis repudiandae labore consequatur quos in ea?</p>
+           </div>
+
+           <img>
+            <img width="400px" src="./public/pngegg.png" />
+           </img>
+
+        </section>
+    </section>
 
     <footer>
         <p>Copyright by Salahudin @</p>
     </footer>
+
+
+    <script>
+
+        let menulist = document.getElementById("menu-list") 
+        menulist.style.maxHeight ="0px"
+        function toggleMenu(){
+            if(menulist.style.maxHeight == "0px"){
+                menulist.style.maxHeight = "300px"
+            } else{
+                menulist.style.maxHeight ="0px"
+            }
+        }
+    </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" ></script>
 
 </body>
 </html>

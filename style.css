@@ -3,10 +3,6 @@
     padding: 0;
 }
 
-li{
-    list-style: none;
-}
-
 header{
     display: flex;
     background-color: rgb(32, 87, 255);
@@ -21,6 +17,7 @@ ul {
 }
 
 li{
+    list-style: none;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     color: white;
@@ -74,4 +71,38 @@ footer{
     justify-content: center; 
     align-items: center;
 
+}
+
+.menu-icon {
+    display: none;
+}
+
+
+
+@media (max-width: 600px) {
+    ul{
+        flex-direction: column;
+        position: absolute;
+        background-color: blue;
+        width: 100vw;
+        height: 30vh;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        margin-top: 70px;
+        overflow: hidden;
+    }
+    li{
+        border-bottom: 2px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    button{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+        margin-left: 250px;
+    }
 }
